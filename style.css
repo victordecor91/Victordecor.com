@@ -175,27 +175,17 @@ input, textarea {
   font-size: .95rem;
   background: rgba(255,255,255,.95);
 }
-textarea { height: 120px; resize: vertical; }
-
-/* ── FOOTER ── */
-footer { background: #071626; color: #8899aa; text-align: center; padding: 40px 20px 28px; font-size: .88rem; }
-.footer-logo { width: min(480px, 90%); height: auto; display: block; margin: 0 auto 24px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,.4); }
-/* LOGO */
-
-.logo img{
-    height:65px;
-    width:auto;
-    display:block;
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
 }
 
-/* CARTE DE VISITE FOOTER */
-
-.footer-logo{
-    max-width:320px;
-    width:100%;
-    height:auto;
-    display:block;
-    margin:30px auto;
-    border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+.footer-logo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
 }
