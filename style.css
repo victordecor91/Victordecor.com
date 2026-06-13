@@ -15,6 +15,11 @@ body {
   color: #1a1a1a;
   line-height: 1.65;
 }
+.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
 
 /* ── NAVIGATION ── */
 .container { max-width: 1200px; margin: auto; padding: 24px; }
