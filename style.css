@@ -176,18 +176,12 @@ input, textarea {
   background: rgba(255,255,255,.95);
 }
 /* LOGO */
-
-.logo img{
-    height:60px;
-    width:auto;
-    display:block;
-}
-/* CARTE DE VISITE FOOTER */
 .logo img {
-    height: 60px;
+    height: 45px;
     width: auto;
     display: block;
 }
+/* CARTE DE VISITE FOOTER */
 
 .footer-logo {
     max-width: 300px;
@@ -196,4 +190,5 @@ input, textarea {
     display: block;
     margin: 20px auto;
     border-radius: 12px;
+
 }
