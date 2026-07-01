@@ -7,7 +7,9 @@
   --gris: #f4f4f2;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -15,17 +17,35 @@ body {
   color: #1a1a1a;
   line-height: 1.65;
 }
-.logo img {
-    height: 70px;
-    width: auto;
-    display: block;
+
+/* NAVIGATION */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
 }
 
-/* ── NAVIGATION ── */
-.container { max-width: 1200px; margin: auto; padding: 24px; }
-nav { background: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,.07); }
-.navwrap { display: flex; justify-content: space-between; align-items: center; }
-.logo img { height: 58px; display: block; }
+nav {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,.07);
+}
+
+.navwrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
 nav a {
   margin-left: 22px;
   color: var(--bleu);
@@ -36,9 +56,13 @@ nav a {
   text-transform: uppercase;
   transition: color .2s;
 }
-nav a:hover { color: var(--or); }
 
-/* ── HERO ── */
+nav a:hover {
+  color: var(--or);
+}
+
+/* HERO */
+
 .hero {
   background:
     linear-gradient(rgba(9,22,44,.76), rgba(9,22,44,.76)),
@@ -47,6 +71,7 @@ nav a:hover { color: var(--or); }
   text-align: center;
   padding: 110px 20px;
 }
+
 .hero h1 {
   font-size: 3.4rem;
   font-weight: 800;
@@ -54,6 +79,7 @@ nav a:hover { color: var(--or); }
   text-transform: uppercase;
   margin: 0 0 6px;
 }
+
 .slogan {
   color: var(--or);
   font-size: 2.2rem;
@@ -62,11 +88,18 @@ nav a:hover { color: var(--or); }
   margin: 15px 0 20px;
   text-shadow: 0 2px 8px rgba(0,0,0,.25);
 }
-}
-.hero p { max-width: 640px; margin: 0 auto 30px; font-size: 1rem; opacity: .9; }
 
-/* ── BUTTONS ── */
-.btn, button {
+.hero p {
+  max-width: 640px;
+  margin: 0 auto 30px;
+  font-size: 1rem;
+  opacity: .9;
+}
+
+/* BOUTONS */
+
+.btn,
+button {
   background: var(--or);
   color: white;
   border: none;
@@ -82,10 +115,19 @@ nav a:hover { color: var(--or); }
   transition: background .2s, transform .15s;
   display: inline-block;
 }
-.btn:hover, button:hover { background: var(--or-hover); transform: translateY(-1px); }
 
-/* ── SECTIONS ── */
-.alt { background: var(--gris); }
+.btn:hover,
+button:hover {
+  background: var(--or-hover);
+  transform: translateY(-1px);
+}
+
+/* SECTIONS */
+
+.alt {
+  background: var(--gris);
+}
+
 h2 {
   color: var(--bleu);
   font-size: 1.8rem;
@@ -93,6 +135,7 @@ h2 {
   letter-spacing: .02em;
   margin-bottom: 6px;
 }
+
 h2::after {
   content: '';
   display: block;
@@ -102,8 +145,14 @@ h2::after {
   margin: 8px 0 20px;
 }
 
-/* ── SERVICES ── */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; }
+/* SERVICES */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
 .card {
   background: white;
   padding: 28px 22px;
@@ -112,15 +161,39 @@ h2::after {
   border-top: 3px solid var(--or);
   transition: transform .2s, box-shadow .2s;
 }
-.card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,.12); }
-.card h3 { color: var(--bleu); margin: 0 0 10px; font-size: 1.05rem; }
 
-/* ── POURQUOI NOUS ── */
-ul { list-style: none; padding-left: 0; }
-li { padding: 5px 0; font-weight: 600; color: var(--bleu); }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.12);
+}
 
-/* ── GALLERY ── */
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.card h3 {
+  color: var(--bleu);
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+/* LISTES */
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 5px 0;
+  font-weight: 600;
+  color: var(--bleu);
+}
+
+/* GALERIE */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
 .gallery figure {
   margin: 0;
   position: relative;
@@ -129,6 +202,7 @@ li { padding: 5px 0; font-weight: 600; color: var(--bleu); }
   aspect-ratio: 4/3;
   background: var(--bleu);
 }
+
 .gallery figure img {
   width: 100%;
   height: 100%;
@@ -136,7 +210,11 @@ li { padding: 5px 0; font-weight: 600; color: var(--bleu); }
   display: block;
   transition: transform .45s ease;
 }
-.gallery figure:hover img { transform: scale(1.08); }
+
+.gallery figure:hover img {
+  transform: scale(1.08);
+}
+
 .gallery figcaption {
   position: absolute;
   bottom: 0;
@@ -151,8 +229,12 @@ li { padding: 5px 0; font-weight: 600; color: var(--bleu); }
   text-transform: uppercase;
 }
 
-/* ── AVIS ── */
-.avis { background: var(--gris); }
+/* AVIS */
+
+.avis {
+  background: var(--gris);
+}
+
 .avis p {
   font-size: 1.05rem;
   font-style: italic;
@@ -164,11 +246,23 @@ li { padding: 5px 0; font-weight: 600; color: var(--bleu); }
   box-shadow: 0 3px 12px rgba(0,0,0,.06);
 }
 
-/* ── CONTACT ── */
-.contact { background: var(--bleu); color: white; }
-.contact h2 { color: white; }
-.contact h2::after { background: var(--or); }
-input, textarea {
+/* CONTACT */
+
+.contact {
+  background: var(--bleu);
+  color: white;
+}
+
+.contact h2 {
+  color: white;
+}
+
+.contact h2::after {
+  background: var(--or);
+}
+
+input,
+textarea {
   width: 100%;
   padding: 12px 16px;
   margin: 8px 0;
@@ -178,34 +272,39 @@ input, textarea {
   font-size: .95rem;
   background: rgba(255,255,255,.95);
 }
-/* LOGO */
-.logo img {
-    height: 45px;
-    width: auto;
-    display: block;
-}
-/* CARTE DE VISITE FOOTER */
+
+/* CARTE DE VISITE */
 
 .footer-logo {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 12px;
-
-}
-@media (max-width:768px){
-
-.navwrap{
-    flex-direction:column;
-    text-align:center;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
 }
 
-nav a{
-    display:inline-block;
-    margin:6px;
-    font-size:0.85rem;
-}
+/* MOBILE */
 
-}
+@media (max-width:768px) {
+
+  .navwrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px;
+    font-size: 0.85rem;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .slogan {
+    font-size: 1.8rem;
+  }
+
+  }
