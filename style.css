@@ -47,18 +47,20 @@ nav {
 }
 
 nav a {
-  margin-left: 22px;
+  margin-left: 12px;
   color: var(--bleu);
   text-decoration: none;
   font-weight: 700;
-  font-size: .85rem;
-  letter-spacing: .08em;
+  font-size: .75rem;
+  letter-spacing: .03em;
   text-transform: uppercase;
-  transition: color .2s;
+}
+.navwrap {
+  flex-wrap: wrap;
 }
 
-nav a:hover {
-  color: var(--or);
+nav a {
+  white-space: nowrap;
 }
 
 /* HERO */
