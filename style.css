@@ -1,11 +1,8 @@
-body {
-  background: red !important;
-}
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Dancing+Script:wght@600&display=swap');
 
 :root {
   --bleu: #0f2d57;
-  --bleu-dark: #0a1c36;
+  --bleu-dark: #081427;
   --or: #c4912a;
   --or-hover: #a87822;
   --gris: #f5f6f8;
@@ -21,8 +18,8 @@ body {
 
 body {
   font-family: 'Raleway', sans-serif;
+  background: var(--blanc);
   color: #1a1a1a;
-  background: #fff;
   line-height: 1.6;
 }
 
@@ -54,7 +51,7 @@ nav {
 }
 
 .menu a {
-  margin-left: 20px;
+  margin-left: 18px;
   text-decoration: none;
   color: var(--bleu);
   font-weight: 700;
@@ -71,33 +68,14 @@ nav {
 /* ================= HERO ================= */
 .hero {
   position: relative;
-  height: 85vh;
-  background: url("images/IMG_20221004_114201.jpg") center/cover no-repeat;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(10, 28, 54, 0.75);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.subhero {
-  color: var(--or);
-  font-weight: 600;
-  margin-bottom: 10px;
+  background: linear-gradient(rgba(8,20,39,0.75), rgba(8,20,39,0.75)),
+              url("images/IMG_20221004_114201.jpg") center/cover no-repeat;
 }
 
 .hero h1 {
@@ -110,9 +88,16 @@ nav {
   color: var(--or);
 }
 
-.hero-text {
+.slogan {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: var(--or);
+  margin-top: 10px;
+}
+
+.hero p {
+  max-width: 700px;
   margin: 20px auto;
-  max-width: 600px;
   opacity: 0.9;
 }
 
@@ -121,8 +106,8 @@ nav {
   display: inline-block;
   background: var(--or);
   color: white;
-  padding: 12px 25px;
-  margin: 10px;
+  padding: 12px 26px;
+  margin-top: 10px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 700;
@@ -131,21 +116,6 @@ nav {
 
 .btn:hover {
   background: var(--or-hover);
-}
-
-.btn-outline {
-  display: inline-block;
-  border: 2px solid white;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.btn-outline:hover {
-  background: white;
-  color: var(--bleu);
 }
 
 /* ================= SECTIONS ================= */
@@ -157,7 +127,6 @@ nav {
   font-size: 32px;
   color: var(--bleu);
   margin-bottom: 40px;
-  position: relative;
 }
 
 .section h2::after {
@@ -169,7 +138,6 @@ nav {
   margin-top: 10px;
 }
 
-/* DARK SECTION */
 .dark {
   background: var(--bleu);
   color: white;
@@ -201,15 +169,15 @@ nav {
 
 .card h3 {
   color: var(--bleu);
-  margin-bottom: 10px;
 }
 
+/* dark cards */
 .card-light {
   background: rgba(255,255,255,0.1);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  font-weight: 600;
+  color: white;
 }
 
 /* ================= CONTACT ================= */
@@ -219,25 +187,22 @@ nav {
   padding: 80px 0;
 }
 
-.contact h2 {
-  color: white;
-}
-
 input, textarea {
   width: 100%;
   padding: 12px;
-  margin: 10px 0;
-  border: none;
+  margin-top: 10px;
   border-radius: 6px;
+  border: none;
 }
 
 button {
   background: var(--or);
   color: white;
-  border: none;
   padding: 12px 25px;
+  border: none;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 10px;
   border-radius: 4px;
 }
 
@@ -251,16 +216,10 @@ footer {
   padding: 20px;
   background: #081427;
   color: white;
-  font-size: 14px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= NAV RESPONSIVE ================= */
 @media (max-width: 768px) {
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
   .navwrap {
     flex-direction: column;
   }
@@ -271,6 +230,14 @@ footer {
 
   .menu a {
     display: inline-block;
-    margin: 8px;
+    margin: 6px;
   }
-}
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .slogan {
+    font-size: 24px;
+  }
+  }
