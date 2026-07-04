@@ -1,312 +1,273 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Dancing+Script:wght@600&display=swap');
 
 :root {
   --bleu: #0f2d57;
+  --bleu-dark: #0a1c36;
   --or: #c4912a;
   --or-hover: #a87822;
-  --gris: #f4f4f2;
+  --gris: #f5f6f8;
+  --blanc: #ffffff;
 }
 
+/* RESET */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Raleway', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #1a1a1a;
-  line-height: 1.65;
+  background: #fff;
+  line-height: 1.6;
 }
 
-/* NAVIGATION */
-
+/* CONTAINER */
 .container {
+  width: 90%;
   max-width: 1200px;
   margin: auto;
-  padding: 24px;
 }
 
+/* ================= NAV ================= */
 nav {
-  background: #fff;
+  background: white;
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,.07);
+  z-index: 999;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
 }
 
 .navwrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 0;
 }
 
 .logo img {
-  height: 45px;
-  width: auto;
-  display: block;
+  height: 55px;
 }
 
-nav a {
-  margin-left: 12px;
-  color: var(--bleu);
+.menu a {
+  margin-left: 20px;
   text-decoration: none;
+  color: var(--bleu);
   font-weight: 700;
-  font-size: .75rem;
-  letter-spacing: .03em;
+  font-size: 13px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-}
-.navwrap {
-  flex-wrap: wrap;
+  transition: 0.3s;
 }
 
-nav a {
-  white-space: nowrap;
+.menu a:hover {
+  color: var(--or);
 }
 
-/* HERO */
-
+/* ================= HERO ================= */
 .hero {
-  background:
-    linear-gradient(rgba(9,22,44,.76), rgba(9,22,44,.76)),
-    url('images/IMG_20221004_114201.jpg') center/cover no-repeat;
-  color: white;
+  position: relative;
+  height: 85vh;
+  background: url("images/IMG_20221004_114201.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 110px 20px;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 28, 54, 0.75);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.subhero {
+  color: var(--or);
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
-  font-size: 3.4rem;
+  font-size: 52px;
   font-weight: 800;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  margin: 0 0 6px;
+  letter-spacing: 2px;
 }
 
-.slogan {
+.hero h1 span {
   color: var(--or);
-  font-size: 2.2rem;
-  font-family: 'Dancing Script', cursive;
-  font-weight: 600;
-  margin: 15px 0 20px;
-  text-shadow: 0 2px 8px rgba(0,0,0,.25);
 }
 
-.hero p {
-  max-width: 640px;
-  margin: 0 auto 30px;
-  font-size: 1rem;
-  opacity: .9;
+.hero-text {
+  margin: 20px auto;
+  max-width: 600px;
+  opacity: 0.9;
 }
 
-/* BOUTONS */
-
-.btn,
-button {
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
   background: var(--or);
   color: white;
-  border: none;
-  padding: 13px 30px;
+  padding: 12px 25px;
+  margin: 10px;
   border-radius: 4px;
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: .88rem;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background .2s, transform .15s;
-  display: inline-block;
+  transition: 0.3s;
 }
 
-.btn:hover,
-button:hover {
+.btn:hover {
   background: var(--or-hover);
-  transform: translateY(-1px);
 }
 
-/* SECTIONS */
-
-.alt {
-  background: var(--gris);
+.btn-outline {
+  display: inline-block;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-h2 {
+.btn-outline:hover {
+  background: white;
   color: var(--bleu);
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: .02em;
-  margin-bottom: 6px;
 }
 
-h2::after {
-  content: '';
-  display: block;
-  width: 44px;
+/* ================= SECTIONS ================= */
+.section {
+  padding: 80px 0;
+}
+
+.section h2 {
+  font-size: 32px;
+  color: var(--bleu);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  width: 60px;
   height: 3px;
   background: var(--or);
-  margin: 8px 0 20px;
+  display: block;
+  margin-top: 10px;
 }
 
-/* SERVICES */
+/* DARK SECTION */
+.dark {
+  background: var(--bleu);
+  color: white;
+}
 
+.dark h2 {
+  color: white;
+}
+
+/* ================= GRID ================= */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
+/* CARDS */
 .card {
   background: white;
-  padding: 28px 22px;
+  padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 3px 16px rgba(0,0,0,.07);
-  border-top: 3px solid var(--or);
-  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(0,0,0,.12);
+  transform: translateY(-5px);
 }
 
 .card h3 {
   color: var(--bleu);
-  margin: 0 0 10px;
-  font-size: 1.05rem;
+  margin-bottom: 10px;
 }
 
-/* LISTES */
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-li {
-  padding: 5px 0;
-  font-weight: 600;
-  color: var(--bleu);
-}
-
-/* GALERIE */
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 14px;
-}
-
-.gallery figure {
-  margin: 0;
-  position: relative;
-  overflow: hidden;
+.card-light {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
   border-radius: 8px;
-  aspect-ratio: 4/3;
-  background: var(--bleu);
+  text-align: center;
+  font-weight: 600;
 }
 
-.gallery figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .45s ease;
-}
-
-.gallery figure:hover img {
-  transform: scale(1.08);
-}
-
-.gallery figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(9,22,44,.82));
-  color: #fff;
-  padding: 28px 14px 12px;
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-}
-
-/* AVIS */
-
-.avis {
-  background: var(--gris);
-}
-
-.avis p {
-  font-size: 1.05rem;
-  font-style: italic;
-  max-width: 680px;
-  padding: 22px 24px;
-  background: white;
-  border-left: 4px solid var(--or);
-  border-radius: 0 8px 8px 0;
-  box-shadow: 0 3px 12px rgba(0,0,0,.06);
-}
-
-/* CONTACT */
-
+/* ================= CONTACT ================= */
 .contact {
-  background: var(--bleu);
+  background: var(--bleu-dark);
   color: white;
+  padding: 80px 0;
 }
 
 .contact h2 {
   color: white;
 }
 
-.contact h2::after {
-  background: var(--or);
-}
-
-input,
-textarea {
+input, textarea {
   width: 100%;
-  padding: 12px 16px;
-  margin: 8px 0;
-  border-radius: 6px;
+  padding: 12px;
+  margin: 10px 0;
   border: none;
-  font-family: 'Raleway', sans-serif;
-  font-size: .95rem;
-  background: rgba(255,255,255,.95);
+  border-radius: 6px;
 }
 
-/* CARTE DE VISITE */
-
-.footer-logo {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px;
+button {
+  background: var(--or);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-/* MOBILE */
+button:hover {
+  background: var(--or-hover);
+}
 
-@media (max-width:768px) {
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #081427;
+  color: white;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 32px;
+  }
 
   .navwrap {
     flex-direction: column;
-    text-align: center;
   }
 
-  nav a {
+  .menu {
+    margin-top: 10px;
+  }
+
+  .menu a {
     display: inline-block;
-    margin: 6px;
-    font-size: 0.85rem;
+    margin: 8px;
   }
-
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-
-  .slogan {
-    font-size: 1.8rem;
-  }
-
-  }
+}
